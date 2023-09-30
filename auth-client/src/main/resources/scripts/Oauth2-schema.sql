@@ -1,0 +1,26 @@
+CREATE TABLE clients (
+  id INT NOT NULL AUTO_INCREMENT,
+  client_id VARCHAR(45) NULL,
+  secret VARCHAR(45) NULL,
+  authorization VARCHAR(45) NULL,
+  PRIMARY KEY(id)
+);
+
+CREATE TABLE redirect_urls (
+  id INT NOT NULL AUTO_INCREMENT,
+  url VARCHAR(500) NULL,
+  client_id VARCHAR(45) NULL,
+  PRIMARY KEY(id)
+);
+CREATE TABLE scope (
+  id INT NOT NULL AUTO_INCREMENT,
+  scope VARCHAR(45) NULL,
+  client_id VARCHAR(45) NOT NULL,
+  PRIMARY KEY(id)
+);
+CREATE TABLE grant_type (
+  id INT NOT NULL AUTO_INCREMENT,
+  grant_type VARCHAR(45) NULL,
+  client_id VARCHAR(45) NULL,
+  PRIMARY KEY(id)
+);
